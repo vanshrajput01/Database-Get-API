@@ -1,11 +1,10 @@
 package com.example.demo.Service;
 
-import com.example.demo.getApiDto.DataDto;
 import com.example.demo.getApiDto.ResponseDto;
 
 public interface EmployeeService {
 
-	ResponseDto addEmployeeData(DataDto data);
+	ResponseDto addEmployeeData(Long id);
 	
 
 }
