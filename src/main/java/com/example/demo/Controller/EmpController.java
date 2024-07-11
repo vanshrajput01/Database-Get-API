@@ -19,7 +19,7 @@ public class EmpController {
 	@Autowired
 	private EmployeeService empService;
 	
-	@GetMapping(value = "/AddEmployee",consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/getEmployee",consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> AddEmloyeeDetails(@RequestParam Long id){
 		ResponseDto response = this.empService.getEmployeeData(id);
 		return new ResponseEntity<>(response,HttpStatus.OK);
