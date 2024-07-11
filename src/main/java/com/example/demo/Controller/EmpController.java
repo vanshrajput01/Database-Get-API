@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.example.demo.Service.EmployeeService;
@@ -20,7 +20,7 @@ public class EmpController {
 	@Autowired
 	private EmployeeService empService;
 	
-	@GetMapping(value = "/AddEmployee",consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "/AddEmployee",consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> AddEmloyeeDetails(@RequestBody  DataDto data){
 		ResponseDto response = this.empService.addEmployeeData(data);
 		return new ResponseEntity<>(response,HttpStatus.OK);
