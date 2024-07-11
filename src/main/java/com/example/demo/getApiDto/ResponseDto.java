@@ -2,19 +2,16 @@ package com.example.demo.getApiDto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class ResponseDto {
+public interface ResponseDto {
 	
 	@JsonProperty("emp_id")
-	public Long getEmp_id;
+	public Long getemp_id();
 	
 	@JsonProperty("emp_name")
-	public String getEmp_anme;
-	
+	public String getemp_name();
 	
 	@JsonProperty("emp_salary")
-	public Long getEmp_salary;
-	
-	
+	public String getemp_salary();
 	
 	
 
