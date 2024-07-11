@@ -4,7 +4,8 @@ import com.example.demo.getApiDto.ResponseDto;
 
 public interface EmployeeService {
 
-	ResponseDto addEmployeeData(Long id);
+
+	ResponseDto getEmployeeData(Long id);
 	
 
 }
